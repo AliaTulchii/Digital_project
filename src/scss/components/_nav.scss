@@ -1,0 +1,111 @@
+.nav {
+    margin-right: 134px;
+}
+.nav__list {
+    display: flex;
+    flex-direction: row;
+}
+.nav__item {
+    &:not(:last-child){
+        margin-right: 60px;
+    }
+
+  overflow: hidden;
+
+    cursor: pointer;
+    position: relative;
+    border: none;
+    padding: 0 2px;
+    background: none;
+    text-transform: uppercase;
+    transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+    transition-duration: 400ms;
+    transition-property: color;
+
+  
+  &:focus, :hover {
+    color: #b8a9a9;
+  }
+  
+
+  
+  &--active::after {
+    position: absolute;
+    content: '';
+    display: block;
+    width: 100%;
+    height: 0.5px;  
+    background-color:var(--text-color);
+        
+    left: 0;
+    bottom: 0;
+    margin-top:1px ;
+
+    // &:hover, :focus{
+    //     background-color: #988d8d;
+    // }
+  }
+
+  &--active::before {
+    position: absolute;
+    content: '';
+    display: block;
+    width: 100%;
+    height: 0.5px;  
+    background-color:var(--text-color);
+        
+    left: 0;
+    top: 5px;
+  }
+
+  
+}
+
+
+  
+
+.nav__link{
+            color: var(--text-color);
+        font-family: inherit;
+        
+        position: relative;
+        overflow: hidden;
+        
+        transition: color .5s;
+        z-index: 1;
+        font-size: 12px;
+        
+        font-weight: 500;
+        
+        &::before {
+            content: "";
+            position: absolute;
+            z-index: -1;
+            background: #000000;
+            height: 150px;
+            width: 200px;
+            border-radius: 50%;
+           }
+           
+           &:hover {
+            color: #fff;
+           }
+           
+           &::before {
+            top: 100%;
+            left: 100%;
+            transition: all .7s;
+           }
+           
+           &:hover::before {
+            top: -30px;
+            left: -30px;
+           }
+           
+           &:active::before {
+            background: #000000;
+            transition: background 0s;
+           }
+       
+       
+}
