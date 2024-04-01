@@ -1,6 +1,6 @@
 .hero{
     display: flex;
-    // flex-direction: ;
+    padding-bottom: 130px;
 }
 
 //LEFT SIDE
@@ -55,6 +55,7 @@
     overflow: hidden;
     transition: color .5s;
     z-index: 1;
+    color: var(--text-color);
 
     &::before {
         content: "";
