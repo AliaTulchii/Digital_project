@@ -1,0 +1,19 @@
+.projects__colection{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 30px;
+    margin-bottom: 30px;
+}
+
+.card__list{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 30px;
+}
+
+.projects__btn{
+    display: block;
+    margin-left: auto;
+}

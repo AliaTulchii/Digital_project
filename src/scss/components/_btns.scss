@@ -51,7 +51,7 @@
 
 
 .btn{
-    
+    color: var(--text-color);
     display: inline-block;
     width: 222px;
     height: 71px;
@@ -59,7 +59,43 @@
     background-color: var(--page-bg);
     text-align: center;
     
+    &--dark{
+        background-color: var(--text-color);
+        color: var(--page-bg);
+        position: relative;
+        overflow: hidden;
+        transition: color .5s;
+        z-index: 1;
     
+
+    &::before {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        background: #464646;
+        height: 150px;
+        width: 300px;
+        border-radius: 50%;
+       }
+       
+    
+       
+       &::before {
+        top: 100%;
+        left: 100%;
+        transition: all .7s;
+       }
+       
+       &:hover::before {
+        top: -30px;
+        left: -30px;
+       }
+       
+       &:active::before {
+        background: #454343;
+        transition: background 0s;
+       }
+    }
     
     &--company{
         position: relative;
