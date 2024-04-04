@@ -58,6 +58,7 @@
     padding-top: 30px;
     background-color: var(--page-bg);
     text-align: center;
+
     
     &--dark{
         background-color: var(--text-color);
@@ -97,6 +98,10 @@
        }
     }
     
+    &--contact{
+        padding-top: 0;
+    }
+
     &--company{
         position: relative;
         overflow: hidden;
