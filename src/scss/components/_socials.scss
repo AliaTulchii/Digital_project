@@ -1,0 +1,22 @@
+.socials__list{
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+
+
+.socials__item{
+        cursor: pointer;
+        &:hover, :focus{
+            svg{
+                fill: var(--accent);
+            }
+        }
+
+   
+}
+
+.socials__icon{
+    fill: var(--page-bg);
+}
