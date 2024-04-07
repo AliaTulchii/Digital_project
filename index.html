@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="./img/logo.svg">
     <title>Digital project</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="./css/main.css">
 </head>
 <body>
@@ -40,8 +41,13 @@
 </header>
 
     <section class="hero container">
-    <div class="hero__left">
-        <h1 class="hero__title">
+    <div class="hero__left "
+    data-aos="fade-right"
+     data-aos-offset="800"
+     data-aos-duration="1500"
+     data-aos-easing="ease-in-sine"
+    >
+        <h1 class="hero__title ">
             <span >Project</span>
             <br>
             Home
@@ -62,7 +68,12 @@
         </div>
 
     </div>
-    <div class="hero__right">
+    <div class="hero__right"
+    data-aos="fade-left"
+     data-aos-offset="800"
+     data-aos-duration="1500"
+     data-aos-easing="ease-in-sine"
+    >
         <img src="./img/hero.png" alt="image" class="hero__img">
         <a href="#" class="btn hero__btn">
             ВЗГЛЯНУТЬ
@@ -70,7 +81,9 @@
         </a>
     </div>
 </section>
-    <section class="company container">
+    <section class="company container" data-aos="fade-down"
+data-aos-easing="linear"
+data-aos-duration="1500">
         <div class="company__container--gray"></div>
         <div class="company__container">
             <div class="company__flex">
@@ -104,8 +117,10 @@
     
     
 </section>
-    <section class="tasks container">
-    <h2 class="title">Основные задачи</h2>
+    <section class="tasks container" data-aos="fade-down"
+    data-aos-easing="linear"
+    data-aos-duration="1500">
+    <h2 class="title" >Основные задачи</h2>
 
     <div class="tasks__content">
         <div class="tasks__first">
@@ -119,7 +134,9 @@
         </div>
     </div>
 </section>
-    <section class="projects container">
+    <section class="projects container" data-aos="fade-down"
+data-aos-easing="linear"
+data-aos-duration="1500">
     <h2 class="title">Наши проекты</h2>
 
     <div class="projects__colection">
@@ -225,11 +242,21 @@
     </a>
 </section>
     <section class="contact container">
-    <h2 class="title">Связаться с нами</h2>
+    <h2 class="title"
+    data-aos="fade-down"
+    data-aos-easing="linear"
+    data-aos-duration="1500"
+    >Связаться с нами</h2>
 
-    <div class="contact__content">
+    <div class="contact__content"
+    
+    >
         
-            <form class="form" autocomplete="off">
+            <form class="form" autocomplete="off" 
+            data-aos="fade-right"
+     data-aos-duration="1500"
+     data-aos-easing="linear"
+            >
                 <div class="form__field"> 
                     <label for="name" class="form__label">Имя</label>          
                     <input type="text" class="form__input" name="name" id="name">                   
@@ -270,23 +297,125 @@
                 </button>
             </form>
 
-        <img src="./img/man.jpg" alt="man">
+        <img src="./img/man.jpg" alt="man" 
+        data-aos="fade-left"
+        data-aos-duration="1500"
+        data-aos-easing="linear">
         </div>
         
         
     
 </section>
-
-
-
     <footer class="footer">
-    <div class="container">
-        <h4>Footer</h4>
+    <div class="footer__container container">
+        <a href="#" class="logo--footer">
+            <img src="./img/logo-footer.svg" alt="logo" class="logo__icon">
+        </a>
+
+        <div class="footer__content">
+
+            <div class="footer__info">
+                <h3 class="footer__title">Информация</h3>
+                <ul class="footer__list">
+                    <li class="footer__item">
+                        <a href="#" class="footer__link">Главная</a>
+                    </li>
+
+                    <li class="footer__item">
+                        <a href="#" class="footer__link">Галерея</a>
+                    </li>
+
+                    <li class="footer__item">
+                        <a href="#" class="footer__link">Проекты</a>
+                    </li>
+
+                    <li class="footer__item">
+                        <a href="#" class="footer__link">Сертификаты</a>
+                    </li>
+
+                    <li class="footer__item">
+                        <a href="#" class="footer__link">Контакты</a>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="footer__contacts">
+                <h3 class="footer__title">Контакты</h3>
+                
+                <div class="footer__contact">
+                    <span class="footer__icon--location">
+                        <img src="./img/location.svg" alt="">
+                    </span>
+                    <p class="footer__text footer__text--location">
+                    100000, Республика  Казахстан, <br>
+                    г. Караганда, ул. Телевизионная 10
+                </p>         
+                </div>
+                
+                <div class="footer__contact">
+                    <span class="footer__icon">
+                        <img src="./img/phone.svg" alt="">
+                    </span>
+                    <p class="footer__text footer__text--phone">
+                        +38 (000) 000 00 00
+                    </p>
+                </div>
+                
+                <div class="footer__contact">
+                    <span class="footer__icon">
+                        <img src="./img/mail.svg" alt="">
+                    </span>
+                    <p class="footer__text">
+                    
+                    mail@gmail.com
+                </p>
+                </div>
+                
+
+            </div>
+
+        </div>
+
+        <div class="footer__socials">
+            <h3 class="footer__title">Социальные сети</h3>
+
+            <ul class="socials__list">
+                <li class="socials__item">
+                    <a href="#" class="socials__link">
+                        <svg class="socials__icon" width="24" height="24">
+                            <use href="./img/symbol-defs.svg#icon-facebook"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li class="socials__item">
+                    <a href="#" class="socials__link">
+                        <svg class="socials__icon" width="24" height="24">
+                            <use href="./img/symbol-defs.svg#icon-twitter"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li class="socials__item">
+                    <a href="#" class="socials__link">
+                        <svg class="socials__icon" width="24" height="24">
+                            <use href="./img/symbol-defs.svg#icon-linkedin"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li class="socials__item">
+                    <a href="#" class="socials__link">
+                        <svg class="socials__icon" width="24" height="24">
+                            <use href="./img/symbol-defs.svg#icon-pinterest"></use>
+                        </svg>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        
     </div>
     
 </footer>    
 
-   
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="./../js/index.bundle.js"></script>
 </body>
 </html>
