@@ -1,9 +1,10 @@
 <header class="header">
-    <div class="container">
-        <div class="header__row">
-            <a href="#" class="logo">
-                <img src="./img/logo.svg" alt="logo" class="logo__icon">
-            </a>
+    <div class="header__container container ">
+        <a href="#" class="logo">
+            <img src="./img/logo.svg" alt="logo" class="logo__icon">
+        </a>
+        
+            
             <nav class="nav">
                 <ul class="nav__list">
                     <li class="nav__item nav__item--active">
@@ -24,7 +25,10 @@
                         </li>
                 </ul>
             </nav>
-        </div>
+        <button class="mobile-nav-btn" id="mobile-nav-btn">
+            <div class="nav-icon"></div>
+            <!-- <img class="nav-icon" src="./../../img/check-svgrepo-com.svg" alt=""> -->
+        </button>
     </div>
 </header>
-<!-- @@include('mobile-nav.html') -->
+@@include('mobile-nav.html')

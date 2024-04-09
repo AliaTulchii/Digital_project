@@ -9,6 +9,14 @@
             // display: block;
             opacity: 1;
             pointer-events: all;
+
+            @include tablet{
+                padding-left: 40px;
+            }
+
+            @include mobile{
+                padding-left: 10px;
+            }
         }
     }
 }
@@ -46,10 +54,19 @@
     font-size: 54px;
     font-weight: 700;
     line-height: 1;
-    padding-bottom:10px;
+    margin-bottom:10px;
     color: var(--page-bg);
     
+    @include tablet{
+        font-size: 34px;
+        margin-bottom:10px;
+    }
 
+    @include mobile{
+        font-size: 16px;
+        margin-bottom:0px;
+
+    }
 }
 
 .card__link{
@@ -60,6 +77,10 @@
     font-weight: 400;
     line-height: 1;
     color: var(--page-bg);    
+
+    @include mobile{
+    font-size: 8px;
+    }
     
     &:hover, :focus{
         img{
@@ -68,4 +89,12 @@
         }
     }
 }
+
+.card__link-svg{
+
+    @include mobile{
+        width: 14px;
+    }
+}
+
 

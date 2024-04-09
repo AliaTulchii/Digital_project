@@ -4,13 +4,27 @@
 
 .tasks__content {
     display: flex;
-    // justify-content: space-between;
+    flex-direction: row;
+    
+    @include mobile{
+        flex-direction: column;
+    }
 }
 .tasks__first {
     // width: 413px;
     display: flex;
     align-items: center;
+    margin: 0;
     margin-right: 160px;
+
+    @include tablet{
+    margin-right: 100px;
+    }
+
+    @include mobile{
+        margin: 0px;
+        margin-bottom: 30px;
+        }
 }
 .tasks__number {
     margin-right: 40px;
@@ -19,6 +33,11 @@
     font-weight: 900;
     line-height: 1.19;
     color: var(--light-gray);
+
+    @include tablet{
+        margin-right: 20px;
+        font-size: 100px;
+    }
 }
 .tasks__text {
     font-size: 20px;
@@ -31,6 +50,18 @@
 
     &--second{
         width: 420px;
+    }
+
+    @include tablet{
+        font-size: 12px;
+
+    &--first{
+        width: 179px;
+    }
+
+    &--second{
+        width: 240px;
+    }
     }
 }
 .tasks__second {

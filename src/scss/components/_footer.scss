@@ -13,11 +13,26 @@
 
 .footer__container{
 	display: flex;
+	flex-direction: row;
+
+	@include tablet{
+		flex-direction: column;
+	}
 }
 
 .footer__content{
 	display: flex;
+	flex-direction: row;
 	margin-right: 70px;
+
+	@include tablet{
+		margin-bottom: 40px;
+	}
+
+	@include mobile{
+		margin-bottom: 40px;
+		flex-direction: column;
+	}
 }
 
 .footer__title{
@@ -29,10 +44,15 @@
 
 .footer__info{
 	margin-right: 157px;
+
+	@include mobile{
+		margin-bottom: 40px;
+	}
 }
 
 .footer__contact{
 	display: flex;
+	
 	
 }
 
@@ -79,3 +99,4 @@
 		margin-right: 19px;
 	}
 }
+

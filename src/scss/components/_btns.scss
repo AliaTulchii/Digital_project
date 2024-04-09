@@ -3,6 +3,10 @@
     justify-content: center;
     align-items: center;
     margin-bottom: 90px;
+
+    @include mobile{
+    margin-bottom: 40px;
+    }
 }
 
 .btns__arrow{
@@ -13,6 +17,11 @@
     overflow: hidden;
     transition: color .5s;
     z-index: 1;
+
+    @include mobile{
+        width: 33px;
+        height: 33px;
+    }
     
     &:first-child{
         margin-right: 23px;
@@ -58,6 +67,13 @@
     padding-top: 30px;
     background-color: var(--page-bg);
     text-align: center;
+
+    @include tablet{
+        width: 142px;
+        height: 41px;
+        padding-top: 15px;
+        font-size: 10px;
+    }
 
     
     &--dark{
@@ -141,3 +157,12 @@
 
     
 }
+
+.btn__arrow{
+    @include tablet{
+        width: 16px;
+
+        
+    }
+}
+

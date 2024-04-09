@@ -7,12 +7,15 @@
 @import "./base/utils";
 @import "./base/containers";
 @import "./base/sticky-footer";
+@import "./base/mixins";
+
 
 /*Components*/
 @import'./components/header';
 @import'./components/footer';
 @import'./components/logo';
 @import'./components/nav';
+@import'./components/nav-icon';
 @import'./components/hero';
 @import'./components/btns';
 @import'./components/company';
@@ -23,6 +26,8 @@
 @import'./components/contact';
 @import'./components/form';
 @import'./components/socials';
+@import'./components/mobile-nav';
+
 
 
 

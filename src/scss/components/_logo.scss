@@ -1,5 +1,9 @@
 .logo {
     &--footer{
         margin-right: 99px;
+
+        @include tablet{
+            margin-bottom: 40px;
+        }
     }
 }

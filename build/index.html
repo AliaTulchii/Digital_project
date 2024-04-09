@@ -11,11 +11,12 @@
 <body>
 
     <header class="header">
-    <div class="container">
-        <div class="header__row">
-            <a href="#" class="logo">
-                <img src="./img/logo.svg" alt="logo" class="logo__icon">
-            </a>
+    <div class="header__container container ">
+        <a href="#" class="logo">
+            <img src="./img/logo.svg" alt="logo" class="logo__icon">
+        </a>
+        
+            
             <nav class="nav">
                 <ul class="nav__list">
                     <li class="nav__item nav__item--active">
@@ -36,14 +37,46 @@
                         </li>
                 </ul>
             </nav>
-        </div>
+        <button class="mobile-nav-btn" id="mobile-nav-btn">
+            <div class="nav-icon"></div>
+            <!-- <img class="nav-icon" src="./../../img/check-svgrepo-com.svg" alt=""> -->
+        </button>
     </div>
 </header>
-
+<div class="mobile-nav">
+	<div class="mobile-nav__top">
+		<a href="#" class="logo">
+		    <img src="./img/logo.svg" alt="logo" class="logo__icon">
+	    </a>
+	<button id="close-mobile-nav">
+		<img src="./img/close-mobile.svg" alt="icon">
+	</button>
+	</div>
+	
+	<ul class="mobile-nav__list">
+		<li class="mobile-nav__item mobile-nav__item--active">
+			<a href="#" class="mobile-nav__link ">ГЛАВНАЯ</a>
+		</li>
+		<li class="mobile-nav__item">
+			<a href="#" class="mobile-nav__link">
+			ГАЛЕРЕЯ</a>
+			</li>
+		<li class="mobile-nav__item">
+			<a href="#" class="mobile-nav__link">ПРОЕКТЫ</a>
+			</li>
+		<li class="mobile-nav__item">
+			<a href="#" class="mobile-nav__link">СЕРТИФИКАТЫ</a>
+			</li>
+		<li class="mobile-nav__item">
+			<a href="#" class="mobile-nav__link">КОНТАКТЫ</a>
+			</li>
+	</ul>
+</div>
+<div class="mobile-nav-fade">	
+</div>
     <section class="hero container">
     <div class="hero__left "
     data-aos="fade-right"
-     data-aos-offset="800"
      data-aos-duration="1500"
      data-aos-easing="ease-in-sine"
     >
@@ -53,16 +86,30 @@
             Home
         </h1>
 
+       
+
         <div class="btns">
             <button class="btns__arrow"><img src="./img/arrow-left.svg" alt="arrow"></button>
             <button class="btns__arrow"><img src="./img/arrow-right.svg" alt=""></button>
             <div class="hero__line"></div>
         </div>
+
+        <div class="hero__mobile"
+        data-aos="fade-left"
+        data-aos-duration="1500"
+        data-aos-easing="ease-in-sine"
+        >
+            <img src="./img/hero.png" alt="image" class="hero__img">
+            <a href="#" class="btn hero__btn">
+                ВЗГЛЯНУТЬ
+                <img src="./img/arrow-right.svg" alt="arrow" class="btn__arrow">
+            </a>
+        </div>
         
         <div class="hero__numbs">
             <span class="hero__numb">01</span>
             <span class="hero__crossline">
-                <img src="./img/line.svg" alt="line">
+                <img src="./img/line.svg" alt="line" hero__crossline-img>
             </span>
             <span class="hero__numb">02</span>
         </div>
@@ -70,17 +117,18 @@
     </div>
     <div class="hero__right"
     data-aos="fade-left"
-     data-aos-offset="800"
-     data-aos-duration="1500"
-     data-aos-easing="ease-in-sine"
+    data-aos-duration="1500"
+    data-aos-easing="ease-in-sine"
     >
         <img src="./img/hero.png" alt="image" class="hero__img">
         <a href="#" class="btn hero__btn">
             ВЗГЛЯНУТЬ
-            <img src="./img/arrow-right.svg" alt="arrow">
+            <img src="./img/arrow-right.svg" alt="arrow" class="btn__arrow">
         </a>
     </div>
 </section>
+
+
     <section class="company container" data-aos="fade-down"
 data-aos-easing="linear"
 data-aos-duration="1500">
@@ -109,7 +157,7 @@ data-aos-duration="1500">
         
                 <a href="#" class="btn btn--company">
                     ЧИТАТЬ
-                    <img src="./img/arrow-right.svg" alt="arrow">
+                    <img src="./img/arrow-right.svg" alt="arrow" class="btn__arrow">
                 </a>
             </div>
         </div>
@@ -143,7 +191,7 @@ data-aos-duration="1500">
         <div class="projects__up">
             <ul class="card__list">
                 <li class="card">
-                    <img src="./img/cardo.jpg" alt="building" >                      
+                    <img src="./img/cardo.jpg" alt="building"  >                      
     
                                   
                         <div class="card__description ">
@@ -152,7 +200,7 @@ data-aos-duration="1500">
                             </h2>
                             <a href="#" class="card__link">
                                 ПОДРОБНЕЕ
-                                <img src="./img/arrow-right-white.svg" alt="arrow">
+                                <img src="./img/arrow-right-white.svg" alt="arrow" class="card__link-svg">
                             </a>
                           </div>
                         
@@ -169,7 +217,7 @@ data-aos-duration="1500">
                             </h2>
                             <a href="#" class="card__link">
                                 ПОДРОБНЕЕ
-                                <img src="./img/arrow-right-white.svg" alt="arrow">
+                                <img src="./img/arrow-right-white.svg" alt="arrow" class="card__link-svg">
                             </a>
                           </div>
                         
@@ -191,7 +239,7 @@ data-aos-duration="1500">
                             </h2>
                             <a href="#" class="card__link">
                                 ПОДРОБНЕЕ
-                                <img src="./img/arrow-right-white.svg" alt="arrow">
+                                <img src="./img/arrow-right-white.svg" alt="arrow" class="card__link-svg">
                             </a>
                           </div>
                         
@@ -204,11 +252,11 @@ data-aos-duration="1500">
                                   
                         <div class="card__description">
                             <h2 class="card__title">
-                                КВАРТАРЫ
+                                КВАРТиРЫ
                             </h2>
                             <a href="#" class="card__link">
                                 ПОДРОБНЕЕ
-                                <img src="./img/arrow-right-white.svg" alt="arrow">
+                                <img src="./img/arrow-right-white.svg" alt="arrow" class="card__link-svg">
                             </a>
                           </div>
                         
@@ -225,7 +273,7 @@ data-aos-duration="1500">
                             </h2>
                             <a href="#" class="card__link">
                                 ПОДРОБНЕЕ
-                                <img src="./img/arrow-right-white.svg" alt="arrow">
+                                <img src="./img/arrow-right-white.svg" alt="arrow" class="card__link-svg">
                             </a>
                           </div>
                         
@@ -238,7 +286,7 @@ data-aos-duration="1500">
 
     <a href="#" class="projects__btn btn btn--dark">
         ВСЕ ПРОЕКТЫ
-        <img src="./img/arrow-right-white.svg" alt="arrow">
+        <img src="./img/arrow-right-white.svg" alt="arrow" class="btn__arrow">
     </a>
 </section>
     <section class="contact container">
@@ -293,11 +341,11 @@ data-aos-duration="1500">
 
                 <button type="submit" href="#" class=" btn btn--contact btn--dark">
                     ОТПРАВИТЬ
-                    <img src="./img/arrow-right-white.svg" alt="">
+                    <img src="./img/arrow-right-white.svg" alt="arrow" class="btn__arrow">
                 </button>
             </form>
 
-        <img src="./img/man.jpg" alt="man" 
+        <img src="./img/man.jpg" alt="man" class="contact__img" 
         data-aos="fade-left"
         data-aos-duration="1500"
         data-aos-easing="linear">

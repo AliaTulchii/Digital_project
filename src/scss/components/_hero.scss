@@ -1,6 +1,11 @@
 .hero{
     display: flex;
+    flex-direction: row;
     padding-bottom: 130px;
+
+    @include mobile{
+    flex-direction: column;
+    }
 }
 
 //LEFT SIDE
@@ -8,8 +13,13 @@
 .hero__left{
     padding-top: 335px;
     
-    animation:  fadeInLeft; /* referring directly to the animation's @keyframe declaration */
-    animation-duration: 2s;
+    @include tablet{
+        padding-top: 140px;
+        }
+
+        @include mobile{
+            padding-top: 80px;
+            }
 }
 
 .hero__title{
@@ -23,12 +33,30 @@
         color: var(--accent);
         font-weight: 300;
     }
+
+    @include tablet{
+        font-size: 34px;
+        margin-bottom: 64px;
+    }
+
+    @include mobile{
+        font-size: 34px;
+        margin-bottom: 24px;
+    }
 }
 
 .hero__line{
     width: 270px;
     height: 1px;
     background-color: var(--light-gray);
+
+    @include tablet{
+    width: 95px;
+    }
+
+    @include mobile{
+        display: none;
+    }
 }
 
 .hero__numb{
@@ -36,20 +64,50 @@
     font-weight: 400;
     line-height: 1;
     color: #BDBDBD;
+
+    @include tablet{
+    font-size: 20px;
+    }
 }
 
 .hero__crossline{
     background-color: transparent;
     margin: 0 24px;
+    
+    & img{
+        @include mobile{
+            width: 20px;
+        }
+    }
 }
 
+
+
+
+.hero__mobile{
+    display: none;
+
+    @include mobile{
+        display: block;
+        margin-bottom: 40px;
+    }
+    
+}
 
 //RIGHT SIDE
 
 .hero__right{
     position: relative;
-    animation:  slideInRight; /* referring directly to the animation's @keyframe declaration */
-    animation-duration: 2s;
+
+    @include mobile{
+        display: none;
+    }
+}
+
+.hero__img{
+     @include tablet{
+        width: 410px;
+     }
 }
 
 .hero__btn{

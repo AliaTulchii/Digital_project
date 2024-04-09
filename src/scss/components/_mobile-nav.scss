@@ -1,35 +1,124 @@
-.mobile-nav {
-	position: fixed;
-	// top: 0;
-	top: -100%;
-	width: 100%;
-	height: 100%;
-    z-index: 99;
+.mobile-nav{
 
-	display: flex;
+    position: fixed;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 375px;
+    padding: 24px;
+    background-color: var(--light-gray);
+    z-index: 999;
+    display: flex;
     flex-direction: column;
-    align-items: center;
-	justify-content: center;
-    padding-top: 40px;
-    padding-bottom: 40px;
-    
 
-    // background: linear-gradient(209deg, #4287b3 -17.38%, #133f6b 78.4%), #276195;
-	background: rgb(130, 156, 168);
-	transition: all 0.2s ease-in;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateX(-50%);
+    transition: all 0.2s ease-in;
 
     &--open{
-        position: fixed;
-        // top: 0;
-        top: 0;
+        opacity: 1;
+        pointer-events: all;
+        transform: translateX(0%);
+
     }
 }
 
-.item{
-    font-size: 28px;
-    color: white;
+.mobile-nav-fade{
+    display: block;
+    position: fixed;
+    z-index: 9;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(86, 86, 86, 0.5);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.2s ease-in;
 
-    &:hover{
-        color:aqua
+    &--open{
+        opacity: 1;
+        pointer-events: all;
     }
+}
+
+
+.mobile-nav__top{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 16px;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-bottom: 40px;
+}
+
+.mobile-nav__list{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.mobile-nav__item {
+    overflow: hidden;  
+    cursor: pointer;
+    position: relative;
+    border: none;
+    padding: 0 2px;
+    background: none;
+    text-transform: uppercase;
+    transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+    transition-duration: 400ms;
+    transition-property: color;
+  
+    &:focus,
+    :hover {
+      color: #b8a9a9;
+    }
+  
+    &--active::after {
+      position: absolute;
+      content: "";
+      display: block;
+      width: 100%;
+      height: 0.5px;
+      background-color: var(--text-color);
+  
+      left: 0;
+      bottom: 0;
+      margin-top: 1px;
+  
+      
+    }
+  
+    &--active::before {
+      position: absolute;
+      content: "";
+      display: block;
+      width: 100%;
+      height: 0.5px;
+      background-color: var(--text-color);
+  
+      left: 0;
+      top: 2px;
+    }
+  }
+
+.mobile-nav__link {
+  color: var(--text-color);
+  font-family: inherit;
+
+  font-size: 12px;
+  font-weight: 500;
+
+ 
+
+  &:hover {
+    color: var(--accent);
+    background-color: var(--text-color);
+  }
+
 }

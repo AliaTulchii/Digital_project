@@ -8,3 +8,9 @@ padding-bottom: 120px;
     align-items: flex-start;
     column-gap: 30px;
 }
+
+.contact__img{
+    @include tablet{
+        display: none;
+    }
+}

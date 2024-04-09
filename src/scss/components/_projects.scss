@@ -7,6 +7,10 @@
     align-items: center;
     row-gap: 30px;
     margin-bottom: 30px;
+
+    @include tablet{
+        row-gap: 20px;
+    }
 }
 
 .card__list{
@@ -14,6 +18,10 @@
     flex-direction: row;
     align-items: center;
     gap: 30px;
+
+    @include tablet{
+        gap: 20px;
+    }
 }
 
 .projects__btn{
